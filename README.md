@@ -20,8 +20,8 @@ The main module will group the other modules in a logical order* * passing outpu
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| do_token | Digital Ocean Personal access token | string |  | **yes** |
-| do_k8s_clustername | Digital Ocean Kubernetes cluster name | string |  | yes |
+| do_token | Digital Ocean Personal access token | string |  | yes |
+| do_k8s_clustername | Cluster identifier | string |  | yes |
 
 ## k8scluster Outputs
 
@@ -31,6 +31,14 @@ The main module will group the other modules in a logical order* * passing outpu
 | k8s_token | Kubernetes Cluster Token |
 | k8s_certificate | Kubernetes Cluster Certificate |
 | k8s_do_kube_config | Kubernetes Cluster kube config |
+
+## nginx-ingress Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|:----:|:-----:|:-----:|
+| k8s_endpoint | Address of your cluster | string |  | yes |
+| k8s_token | DO Cluster Token | string |  | yes |
+| k8s_certificate | DO Cluster Certificate | string |  | yes |
 
 
 ## Test
