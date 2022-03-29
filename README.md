@@ -48,8 +48,10 @@ Get your newly deployed cluster name (you'll need doctl cli)
 ``doctl kubernetes cluster list``
 
 Add the credentials to your local kubeconfig
+
 ``doctl kubernetes cluster kubeconfig save <cluster-name>``
 
 Access
+
 ``kubectl --context=<cluster-name> get pods --all-namespaces``
 
